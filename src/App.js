@@ -20,6 +20,7 @@ function App() {
 
   return (
     <Router>
+   
       <nav>
         <Link to="/"> Home </Link>
 
@@ -31,13 +32,15 @@ function App() {
             <button className="base_button logout" onClick={signUserOut}>Log Out</button>
           </>
         )}
-      </nav>
+      </nav>,
+
       <Routes>
         <Route path="/" element={<Home isAuth={isAuth} />} />
         <Route path="/createpost" element={<CreatePost isAuth={isAuth} />} />
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
       </Routes>
     </Router>
+    
   );
 }
 
